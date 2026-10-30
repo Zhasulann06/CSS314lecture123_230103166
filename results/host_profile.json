@@ -1,0 +1,41 @@
+{
+  "cpu": {
+    "model": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+    "identifier": "Intel64 Family 6 Model 141 Stepping 1",
+    "microarchitecture": "Tiger Lake",
+    "base_frequency_mhz": 2700,
+    "base_frequency_source": "rated frequency in CPU model string"
+  },
+  "topology": {
+    "physical_cores": 6,
+    "logical_threads": 12,
+    "smt_enabled": true,
+    "cache_line_bytes": 64,
+    "cache_bytes_per_instance": {
+      "L1_data": [
+        32768
+      ],
+      "L2": [
+        1310720
+      ],
+      "L3": [
+        12582912
+      ]
+    },
+    "cache_instance_counts": {
+      "L1_data": 6,
+      "L2": 6,
+      "L3": 1
+    }
+  },
+  "os": {
+    "system": "Windows",
+    "release": "11",
+    "kernel_version": "10.0.26300"
+  },
+  "python": {
+    "implementation": "CPython",
+    "version": "3.14.5",
+    "compiler": "MSC v.1944 64 bit (AMD64)"
+  }
+}
