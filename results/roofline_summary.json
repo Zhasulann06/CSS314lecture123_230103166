@@ -1,0 +1,30 @@
+{
+  "student_id": "230103166",
+  "kernel": "five-point stencil: output = 0.2 * (center + north + south + east + west)",
+  "floating_point_operations_per_cell": 5,
+  "bytes_per_cell_no_reuse": 48,
+  "bytes_per_cell_ideal_reuse": 16,
+  "arithmetic_intensity_flop_per_byte_no_reuse": 0.10416666666666667,
+  "arithmetic_intensity_flop_per_byte_ideal_reuse": 0.3125,
+  "cache_bytes_per_instance": {
+    "L1_data": [
+      32768
+    ],
+    "L2": [
+      1310720
+    ],
+    "L3": [
+      12582912
+    ]
+  },
+  "strong_p1_input_and_output_bytes": 34668544,
+  "theoretical_memory_bandwidth_gb_s": 51.2,
+  "theoretical_bandwidth_assumption": "CPU supports up to DDR4-3200 and two memory channels; assumes both channels populated at 3200 MT/s, which is unverified for this host",
+  "cpu_memory_spec_source": "https://www.intel.com/content/www/us/en/products/sku/213805/intel-core-i511400h-processor-12m-cache-up-to-4-50-ghz/specifications.html",
+  "measured_stride_one_read_bandwidth_gb_s": 7.397810052417199,
+  "theoretical_bandwidth_roof_gflops_no_reuse": 5.333333333333333,
+  "theoretical_bandwidth_roof_gflops_ideal_reuse": 16.0,
+  "observed_strong_p1_gflops": 0.18505384279817785,
+  "classification": "low-arithmetic-intensity; bandwidth-limited in an optimized Roofline model",
+  "interpretation_limit": "The measured NumPy/multiprocessing implementation also includes array temporaries, Python dispatch, and process startup; these measurements do not isolate a DRAM bandwidth limit."
+}
