@@ -1,0 +1,25 @@
+{
+  "student_id": "230103166",
+  "salted_N": 1472,
+  "measured_block_M": 736,
+  "runs": 3,
+  "time_ns": {
+    "naive_ijk": [
+      3261342300,
+      3135599100,
+      2974677000
+    ],
+    "interchanged_ikj": [
+      1745815100,
+      2050887300,
+      2324675700
+    ]
+  },
+  "median_time_ns": {
+    "naive_ijk": 3135599100,
+    "interchanged_ikj": 2050887300
+  },
+  "speedup": 1.5288987844432018,
+  "max_absolute_error": 7.389644451905042e-13,
+  "method": "NumPy inner-loop operations; outer loop order retained"
+}
