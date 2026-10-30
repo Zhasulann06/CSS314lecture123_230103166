@@ -55,6 +55,7 @@ def main():
         parser.error("iterations must be positive")
     rows = []
     baselines = {}
+    karp_by_mode = {}
     for mode in ("unpadded", "padded", "privatized"):
         for p in (1, 2, 4, 8):
             elapsed, total = measure(p, args.iterations, mode)
@@ -73,7 +74,13 @@ def main():
                 "increments_per_second": total * 1e9 / elapsed,
             }
             rows.append(row)
+            karp_by_mode[(mode, p)] = karp_flatt
             print(f"{mode:11s} P={p} time={elapsed / 1e9:.3f}s e={karp_flatt}", flush=True)
+    for row in rows:
+        p = row["processes"]
+        row["p"] = p
+        row["e_unpadded"] = karp_by_mode[("unpadded", p)]
+        row["e_padded"] = karp_by_mode[("padded", p)]
     with (ROOT / "results" / "false_sharing_karp_flatt.tsv").open("w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=rows[0].keys(), delimiter="\t")
         writer.writeheader()

@@ -145,6 +145,10 @@ def main() -> None:
         "topology": topology,
         "os": {"system": platform.system(), "release": platform.release(), "kernel_version": platform.version()},
         "python": {"implementation": platform.python_implementation(), "version": platform.python_version(), "compiler": platform.python_compiler()},
+        "cpu_model": processor["model"],
+        "physical_cores": topology["physical_cores"],
+        "logical_threads": topology["logical_threads"],
+        "cache_line_bytes": topology["cache_line_bytes"],
     }
     output = ROOT / "results"
     output.mkdir(exist_ok=True)

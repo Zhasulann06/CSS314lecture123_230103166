@@ -65,6 +65,8 @@ def main() -> None:
         "time_ns": timings,
         "median_time_ns": {"naive_ijk": naive_median, "interchanged_ikj": interchanged_median},
         "speedup": naive_median / interchanged_median,
+        "naive_time_s": naive_median / 1e9,
+        "interchanged_time_s": interchanged_median / 1e9,
         "max_absolute_error": maximum_error,
         "method": "NumPy inner-loop operations; outer loop order retained",
     }

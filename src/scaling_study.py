@@ -171,6 +171,7 @@ def write_roofline(params, profile, rows):
         "bytes_per_cell_ideal_reuse": reuse_bytes_per_cell,
         "arithmetic_intensity_flop_per_byte_no_reuse": flops_per_cell / naive_bytes_per_cell,
         "arithmetic_intensity_flop_per_byte_ideal_reuse": flops_per_cell / reuse_bytes_per_cell,
+        "arithmetic_intensity": flops_per_cell / naive_bytes_per_cell,
         "cache_bytes_per_instance": caches,
         "strong_p1_input_and_output_bytes": 2 * params["N"] ** 2 * 8,
         "theoretical_memory_bandwidth_gb_s": theoretical_gb_s,
@@ -181,6 +182,7 @@ def write_roofline(params, profile, rows):
         "theoretical_bandwidth_roof_gflops_ideal_reuse": theoretical_gb_s * flops_per_cell / reuse_bytes_per_cell,
         "observed_strong_p1_gflops": observed_gflops,
         "classification": "low-arithmetic-intensity; bandwidth-limited in an optimized Roofline model",
+        "regime": "memory-bound",
         "interpretation_limit": "The measured NumPy/multiprocessing implementation also includes array temporaries, Python dispatch, and process startup; these measurements do not isolate a DRAM bandwidth limit.",
     }
     (ROOT / "results" / "roofline_summary.json").write_text(

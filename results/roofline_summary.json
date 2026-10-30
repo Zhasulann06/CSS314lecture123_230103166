@@ -26,5 +26,7 @@
   "theoretical_bandwidth_roof_gflops_ideal_reuse": 16.0,
   "observed_strong_p1_gflops": 0.18505384279817785,
   "classification": "low-arithmetic-intensity; bandwidth-limited in an optimized Roofline model",
-  "interpretation_limit": "The measured NumPy/multiprocessing implementation also includes array temporaries, Python dispatch, and process startup; these measurements do not isolate a DRAM bandwidth limit."
+  "interpretation_limit": "The measured NumPy/multiprocessing implementation also includes array temporaries, Python dispatch, and process startup; these measurements do not isolate a DRAM bandwidth limit.",
+  "arithmetic_intensity": 0.10416666666666667,
+  "regime": "memory-bound"
 }

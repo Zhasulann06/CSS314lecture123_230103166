@@ -41,6 +41,7 @@ def main() -> None:
             "elements_touched": len(view),
             "median_time_ns": median_ns,
             "ns_per_element": median_ns / len(view),
+            "latency_ns": median_ns / len(view),
             "checksum": total,
         })
         print(f"stride={stride:3d}  {rows[-1]['ns_per_element']:.3f} ns/element")

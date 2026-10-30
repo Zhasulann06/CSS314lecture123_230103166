@@ -37,5 +37,9 @@
     "implementation": "CPython",
     "version": "3.14.5",
     "compiler": "MSC v.1944 64 bit (AMD64)"
-  }
+  },
+  "cpu_model": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+  "physical_cores": 6,
+  "logical_threads": 12,
+  "cache_line_bytes": 64
 }
