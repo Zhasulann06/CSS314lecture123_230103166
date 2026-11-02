@@ -1,0 +1,98 @@
+{
+  "experiment": "A: task granularity",
+  "recorded_at_utc": "2026-11-02T04:03:55.801151+00:00",
+  "total_items": 1000000,
+  "workers": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "chunk_sizes": [
+    1,
+    10000
+  ],
+  "checksum": 131434424,
+  "measurements": [
+    {
+      "chunk_size": 1,
+      "workers": 1,
+      "elapsed_ns": 67695615000,
+      "elapsed_s": 67.695615,
+      "speedup": 1.0,
+      "efficiency_percent": 100.0,
+      "karp_flatt": null,
+      "checksum": 131434424
+    },
+    {
+      "chunk_size": 1,
+      "workers": 2,
+      "elapsed_ns": 74671490400,
+      "elapsed_s": 74.6714904,
+      "speedup": 0.9065791326431057,
+      "efficiency_percent": 45.32895663215529,
+      "karp_flatt": 1.2060953401486936,
+      "checksum": 131434424
+    },
+    {
+      "chunk_size": 1,
+      "workers": 4,
+      "elapsed_ns": 88723938800,
+      "elapsed_s": 88.7239388,
+      "speedup": 0.7629915433826524,
+      "efficiency_percent": 19.07478858456631,
+      "karp_flatt": 1.4141740209711762,
+      "checksum": 131434424
+    },
+    {
+      "chunk_size": 1,
+      "workers": 8,
+      "elapsed_ns": 83674216700,
+      "elapsed_s": 83.6742167,
+      "speedup": 0.8090379291235121,
+      "efficiency_percent": 10.112974114043901,
+      "karp_flatt": 1.2697554204318002,
+      "checksum": 131434424
+    },
+    {
+      "chunk_size": 10000,
+      "workers": 1,
+      "elapsed_ns": 11196080600,
+      "elapsed_s": 11.1960806,
+      "speedup": 1.0,
+      "efficiency_percent": 100.0,
+      "karp_flatt": null,
+      "checksum": 131434424
+    },
+    {
+      "chunk_size": 10000,
+      "workers": 2,
+      "elapsed_ns": 6746809700,
+      "elapsed_s": 6.7468097,
+      "speedup": 1.6594629310502118,
+      "efficiency_percent": 82.97314655251058,
+      "karp_flatt": 0.2052092050855725,
+      "checksum": 131434424
+    },
+    {
+      "chunk_size": 10000,
+      "workers": 4,
+      "elapsed_ns": 4250056500,
+      "elapsed_s": 4.2500565,
+      "speedup": 2.634336884697886,
+      "efficiency_percent": 65.85842211744715,
+      "karp_flatt": 0.17280289437478089,
+      "checksum": 131434424
+    },
+    {
+      "chunk_size": 10000,
+      "workers": 8,
+      "elapsed_ns": 3119224200,
+      "elapsed_s": 3.1192242,
+      "speedup": 3.5893798849085616,
+      "efficiency_percent": 44.86724856135702,
+      "karp_flatt": 0.17554246362147227,
+      "checksum": 131434424
+    }
+  ]
+}
